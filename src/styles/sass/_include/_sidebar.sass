@@ -1,0 +1,45 @@
+.sidebar-title
+	+fs(18rem)
+	text-transform: uppercase
+	font-weight: 500
+	color: $main
+	margin-bottom: 15px
+	border-bottom: 2px solid $yellow
+	padding: 10px 0
+	+pos(rel,null)
+	&:after
+		content: ''
+		display: block
+		width: 0
+		padding: 0
+		border: 5px solid
+		border-color: transparent $yellow $yellow transparent
+		+pos(abs, null 0 0 null)
+.sidebar-category
+	margin: 50px 0
+	+media-breakpoint-down(md)
+		margin-top: 0
+	ul 
+		li
+			padding: 10px 15px
+			+bor-rad(3px)
+			&:before
+				content: '\f105'
+				font-family: 'fontawesome'
+				margin-right: 10px
+				+transition(all,0.3s)
+			a 
+				color: $main
+				+transition(all,0.3s)
+				&:hover
+					color: $yellow
+			&:hover
+				&:before
+					margin-right: 15px
+				a 
+					letter-spacing: 1px
+					color: $yellow
+			&.active
+				border: 1px dashed darken($white,20%)
+				a 
+					color: $yellow

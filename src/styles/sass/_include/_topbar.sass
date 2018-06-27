@@ -1,0 +1,28 @@
+.topbar
+	background: lighten($blue,5%)
+	+flexbox
+	justify-content: center
+	+media-breakpoint-down(md)
+		display: block
+	ul 
+		text-align: center
+		white-space: nowrap
+		overflow: auto
+		+media-breakpoint-down(lg)
+			max-width: 100%
+		+media-breakpoint-down(md)
+			width: 100%
+		li 
+			// float: left
+			display: inline-block
+			a
+				color: $white
+				+fs(14rem)
+				font-weight: 300
+				text-transform: uppercase
+				display: block
+				line-height: 40px
+				padding: 0px 15px
+			&.active
+				a 
+					background: color-rgba($black,0.1)

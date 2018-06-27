@@ -1,0 +1,230 @@
+#map
+	+media-breakpoint-up(xl)
+		iframe 
+			pointer-events: none
+			&.active
+				pointer-events: all
+.contact-page
+	padding: 60px 0
+	.contact-maps
+		+flexbox
+		flex-wrap: wrap
+		margin-bottom: 30px
+		.nav-tabs
+			width: 30%
+			margin: 0
+			padding: 0
+			border: none
+			background: darken($white,5%)
+			+media-breakpoint-down(md)
+				width: 40%
+			+media-breakpoint-down(sm)
+				width: 100%
+			.nav-item
+				float: none
+				margin: 0
+				padding: 0
+				+ .nav-item
+					margin-left: 0
+				.nav-link
+					margin: 0
+					padding: 0
+					border: none
+					&.active
+						margin: 0
+						padding: 0
+						border: none
+						.contact-info
+							background: $blue
+							&:after
+								opacity: 1
+							.company
+								color: $white
+							ul 
+								li 
+									color: $white
+		.tab-content
+			width: 70%
+			+media-breakpoint-down(md)
+				width: 60%
+			+media-breakpoint-down(sm)
+				width: 100%
+			.tab-pane
+				height: 100%
+			#map, iframe
+				height: 100%
+				+media-breakpoint-down(sm)
+					height: 300px
+	.contact-info
+		padding: 10px 15px
+		+pos(rel,null)
+		+transition(all,0.5s)
+		&:after
+			content: ''
+			display: block
+			+pos(abs, 50% 0 null null)
+			+transform(translateY(-50%)translateX(100%))
+			width: 0
+			height: 0
+			border: 10px solid transparent 
+			border-left-color: $blue
+			opacity: 0
+			+transition(all,0.5s)
+			+media-breakpoint-down(sm)
+				display: none
+		.company
+			font-weight: 700
+			color: $main
+			// +fs(16rem)
+			margin-bottom: 5px
+			line-height: 1.3
+			+transition(all,0.5s)
+			+media-breakpoint-down(md)
+				+fs(15rem)
+		ul 
+			li 
+				+pos(rel,null)
+				padding-left: 25px
+				+fs(14rem)
+				font-weight: 300
+				// margin-bottom: 5px
+				color: $main
+				+transition(all,0.5s)
+				.fa 
+					color: $red
+					+pos(abs, 4px null null 0)
+					width: 20px
+					text-align: center
+				a 
+					color: $main
+					&:hover
+						color: $blue
+	.working-time
+		background: url(../img/contactbg.png) top left repeat
+		padding: 30px 35px
+		margin-bottom: 30px
+		+media-breakpoint-down(md)
+			padding: 20px
+		.title
+			+fs(16rem)
+			font-weight: 700
+			color: $main
+			margin-bottom: 10px
+			+media-breakpoint-down(md)
+				+fs(15rem)
+		.time
+			+pos(rel,null)
+			padding-left: 30px
+			+fs(18rem)
+			margin-bottom: 5px
+			+media-breakpoint-down(md)
+				+fs(16rem)
+			.fa 
+				color: $red
+				+pos(abs, 2px null null 0)
+				width: 20px
+				text-align: center
+				+fs(24rem)
+				+media-breakpoint-down(md)
+					+fs(20rem)
+			span 
+				display: block
+				+fs(14rem)
+				+media-breakpoint-down(md)
+					+fs(13rem)
+
+.contact-form
+	.module-title
+		margin-bottom: 10px
+		+fs(14rem)
+		line-height: 1.5
+	.form-wrap
+		margin: 0px -10px
+	.form-group
+		padding: 0px 10px
+		margin-bottom: 15px
+		float: left
+		width: 100%
+		&.col2
+			width: 33.33%
+			float: left
+			+media-breakpoint-down(md)
+				width: 50%
+			+media-breakpoint-down(xs)
+				width: 100%
+		label
+			display: none
+		label.fileinput
+			display: block
+			margin-bottom: 10px
+			// text-transform: uppercase
+			+fs(14rem)
+			color: $black
+			font-style: italic
+			span 
+				text-transform: none
+		input, textarea, select
+			width: 100%
+			border: 1px solid darken($white,10%)
+			padding: 10px 15px
+		select
+			padding: 9px 10px
+			color: darken($white,40%)
+			option
+		input[type="file"]
+			padding: 5px
+			margin-bottom: 15px
+			width: 50%
+			+media-breakpoint-down(md)
+				width: 100%
+		.des
+			+fs(14rem)
+			color: darken($white,60%)
+			font-style: italic
+	.qupload
+		padding: 0
+	.RadUpload .ruFileWrap
+		overflow: visible
+	.RadUploadSubmit, .RadUpload_Simple .ruButton
+		margin-left: 0
+		line-height: 1.5
+		padding: 5px 15px
+		background: $blue
+		color: $white
+		border: none
+		cursor: pointer
+		&:hover
+			background: lighten($blue,10%)
+	.captcha
+		padding: 0 10px
+		margin-bottom: 15px
+		clear: both
+		width: 100%
+	.btnwrap
+		clear: both
+		padding: 0px 15px
+	// div.RadUploadSubmit, div.RadUpload_Simple .ruButton
+	// 	border: 1px solid darken($white,10%)
+	// 	+bor-rad(3px)
+	// 	background: darken($white,40%)
+	// 	color: $white
+	// 	line-height: 36px
+	// 	font-weight: 700
+	// 	+fs(13rem)
+	// 	padding: 0px 20px
+	.frm-btnwrap
+		padding: 0px
+		input
+			width: auto
+	input[type="reset"]
+		display: none
+	input[type="submit"]
+		background: $blue
+		line-height: 40px
+		+bor-rad(0px)
+		color: $white
+		text-transform: uppercase
+		padding: 0 30px
+		border: none
+		&:hover
+			background: $blue

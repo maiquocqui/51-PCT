@@ -1,0 +1,395 @@
+main
+	padding-top: 70px
+	+media-breakpoint-down(lg)
+		padding-top: 60px
+.homepage
+	main 
+		padding-top: 0
+		+media-breakpoint-down(lg)
+			padding-top: 0
+.homepage
+	padding-top: 0
+	header
+		.container
+			max-width: 100% 
+			width: 100%
+			padding: 0px 50px
+			+media-breakpoint-down(lg)
+				padding: 0px 15px
+header
+	background: $white
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	+transition(all,0.5s)
+	+media-breakpoint-down(lg)
+		.container
+			max-width: 100%
+			width: 100%
+			padding: 0px 15px
+	.headermain
+		+pos(rel,null)
+	.sitelogo
+		float: left
+		padding: 5px 0
+		+media-breakpoint-down(lg)
+			+pos(abs, 0 null 0 50%)
+			+transform(translateX(-50%))
+			float: none
+		a 
+			display: block
+			img 
+				height: 70px
+				+media-breakpoint-down(lg)
+					height: 50px
+		.logo2
+			display: none
+	.overlay
+		+pos(fix, 0 null 0 0)
+		right: 0
+		background: $black
+		opacity: 0.5
+		z-index: 900
+		display: none
+	.btn-showmenu
+		display: none
+		float: left
+		margin: 20px 15px 20px 0
+		width: 24px
+		height: 20px
+		+pos(rel,null)
+		z-index: 1
+		span 
+			display: block
+			width: 24px
+			height: 2px
+			background: $main
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+transition(all,0.5s)
+		&:before
+			content: ""
+			display: block
+			height: 2px
+			background: $main
+			+pos(abs, 0 0 null 0)
+			+transition(all,0.5s)
+		&:after
+			content: ""
+			display: block
+			height: 2px
+			background: $main
+			+pos(abs, null 0 0 0)
+			+transition(all,0.5s)
+		&.active
+			span 
+				opacity: 0
+				+media-breakpoint-down(lg)
+					background: $white
+			&:before
+				+transform(translateY(-50%)rotateZ(45deg))
+				top: 50%
+				+media-breakpoint-down(lg)
+					background: $white
+			&:after
+				+transform(translateY(50%)rotateZ(-45deg))
+				bottom: 50%
+				+media-breakpoint-down(lg)
+					background: $white
+		+media-breakpoint-down(lg)
+			display: block
+	.menu
+		float: right
+		+media-breakpoint-down(lg)
+			+pos(fix,0 null 0 0)
+			width: 280px
+			z-index: 1000
+			background: $white
+			padding: 0
+			+transform(translateX(-100%))
+			+transition(all,0.5s)
+			&.open
+				+transform(translateX(0%))
+		.sitelogo
+			+pos(static,unset)
+			+transform(translateX(0))
+			text-align: center
+			border-bottom: 2px solid $blue
+			float: none
+			img 
+				height: 50px
+		.menucontent
+			// float: left
+			+media-breakpoint-down(lg)
+				float: none
+				width: 100%
+				padding: 0
+				max-height: calc(100vh - 72px)
+				overflow: auto
+		.menuwrap
+			float: left
+			+media-breakpoint-down(lg)
+				float: none
+		ul.menulink
+			> li
+				float: left
+				padding: 25px 0
+				+media-breakpoint-down(lg)
+					float: none
+					padding: 0px
+					border-bottom: 1px solid darken($white,5%)
+				+ li
+					margin-left: 30px
+					+media-breakpoint-down(lg)
+						margin-left: 0
+				> a 
+					color: $main
+					display: block
+					+pos(rel,null)
+					padding: 5px 0
+					line-height: 20px
+					font-weight: 500
+					text-transform: uppercase
+					+media-breakpoint-down(lg)
+						padding: 10px 20px
+						+fs(14rem)
+					&:after
+						content: ''
+						display: block
+						width: 0
+						height: 2px
+						background: $red
+						+pos(abs, null null 0 50%)
+						+transform(translateX(-50%))
+						+transition(all,0.5s)
+						+media-breakpoint-down(lg)
+							display: none
+					&:hover
+						+media-breakpoint-up(xl)
+							color: $blue
+				&.hassub
+					+pos(rel,null)
+					.btn-showsub
+						display: none
+						+pos(abs, 5px 0px null null)
+						width: 40px
+						height: 30px
+						line-height: 30px
+						+fs(18rem)
+						text-align: center
+						+transition(all,0.5s)
+						+media-breakpoint-down(lg)
+							display: block
+						&.active
+							+transform(scale(1,-1))
+					.sub
+						+pos(abs, 100% null null 50%)
+						min-width: 270px
+						visibility: hidden
+						opacity: 0
+						margin-top: 20px
+						+transform(translateX(-50%))
+						+transition(all,0.5s)
+						box-shadow: 0 0px 30px color-rgba($black,0.1)
+						background: $blue
+						+media-breakpoint-down(lg)
+							+pos(static,null)
+							margin-top: 0
+							visibility: visible
+							opacity: 1
+							+transform(translateX(0))
+							background: darken($white,5%)
+							box-shadow: none
+							+transition(all,0s)
+							display: none
+							padding: 0px 20px
+						li
+							a 
+								display: block
+								+fs(14rem)
+								padding: 7px 15px
+								color: color-rgba($white,0.8)
+								border-bottom: 1px solid color-rgba($white,0.2)
+								+media-breakpoint-down(lg)
+									color: color-rgba($black,0.6)
+									border-bottom: 1px dashed color-rgba($black,0.1)
+									padding: 7px 0
+							&:hover, &.active
+								a
+									color: $white
+									background: color-rgba($black,0.2)
+									+media-breakpoint-down(lg)
+										color: $red
+										background: none
+					&:hover
+						+media-breakpoint-up(xl)
+							.sub
+								visibility: visible
+								opacity: 1
+								margin-top: 0
+								// margin-left: 0
+				&.active
+					> a 
+						color: $blue
+						&:after
+							width: 50px
+	.tool
+		float: left
+		margin-left: 30px
+		+pos(rel,null)
+		line-height: 20px
+		padding: 30px 0
+		+media-breakpoint-down(lg)
+			padding: 10px 20px
+			margin-left: 0
+	.language
+		float: left
+		font-weight: 500
+		margin-top: -2px
+		a 
+			color: $main
+			float: left
+			+ a 
+				margin-left: 10px
+			&:hover
+				color: $blue
+				// .fa 
+				// 	color: $red
+	.searchtoggle
+		float: left
+		margin-left: 30px
+		color: $main
+		opacity: 0.8
+		cursor: pointer
+		+fs(16rem)
+		+transition(all,0.5s)
+		+media-breakpoint-down(lg)
+			+fs(18rem)
+			float: right
+			margin-left: 0
+			line-height: 20px
+			padding: 20px 0
+			.fa 
+				&:before
+					line-height: 1
+		&:hover
+			color: $blue
+	.search
+		+pos(abs,100% 0 null null)
+		background: $blue
+		width: 250px
+		+transition(all,0.5s)
+		margin-right: -50px
+		visibility: hidden
+		opacity: 0
+		&.open
+			margin-right: 0
+			visibility: visible
+			opacity: 1
+		input
+			width: calc(100% - 36px)
+			background: none
+			border: none
+			color: $white
+			padding: 10px 15px
+			float: left
+			+media-breakpoint-down(lg)
+				color: $white
+		.searchbutton
+			width: 36px
+			height: 30px
+			line-height: 30px
+			margin: 3px 0
+			float: left
+			color: color-rgba($white,0.8)
+			border-left: 1px solid color-rgba($white,0.3)
+			+transition(all,0.5s)
+			+media-breakpoint-down(lg)
+				color: $white
+			&:hover
+				color: color-rgba($white,0.9)
+	&.minimal
+		box-shadow: 0 3px 20px color-rgba($black,0.075)
+
+.homepage
+	header
+		background: linear-gradient(color-rgba($black,0.3),color-rgba($black,0))
+		.btn-showmenu
+			span 
+				background: $white
+			&:before, &:after
+				background: $white
+		.sitelogo
+			a 
+				img 
+					// filter: grayscale(100%) brightness(1000%)
+			.logo1
+				display: none
+			.logo2
+				display: block
+		.menu
+			ul.menulink
+				> li 
+					> a 
+						color: $white
+						+media-breakpoint-down(lg)
+							color: $main
+					&.active
+						> a 
+							+media-breakpoint-down(lg)
+								color: $blue
+		.language
+			a 
+				color: $white
+				+media-breakpoint-down(lg)
+					color: $main
+		.searchtoggle
+			color: $white
+			opacity: 1
+			+media-breakpoint-down(lg)
+				color: $white
+		&.minimal
+			background: $white
+			.btn-showmenu
+				span 
+					background: $main
+				&:before, &:after
+					background: $main
+			.sitelogo
+				.logo1
+					display: block
+				.logo2
+					display: none
+			.menu
+				ul.menulink
+					> li 
+						> a 
+							color: $main
+						&:hover, &.active
+							> a 
+								color: $blue
+			.language
+				a 
+					color: $main
+					&:hover
+						color: $blue
+			.searchtoggle
+				color: $main
+				&:hover
+					color: $blue
+
+.home-popup
+	+pos(fix, 0 null 0 0)
+	z-index: 10000
+	right: 0
+	background: color-rgba($black,0.8)
+	.popupimg
+		max-width: 60%
+		+pos(abs, 50% null null 50%)
+		+transform(translateX(-50%)translateY(-50%))
+		.btn-closepopup
+			+pos(abs, 15px 15px null null)
+			+fs(24rem)
+			color: $white
+		a
+			display: block
+			img

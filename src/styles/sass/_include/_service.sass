@@ -1,0 +1,251 @@
+.service-page
+	padding: 40px 0
+	.servicelist
+		article
+			+media-breakpoint-down(md)
+				margin-bottom: 30px
+		.servicecol
+			height: 100%
+			+pos(rel,null)
+			&:after
+				// content: ''
+				// display: block
+				// width: 50px
+				// height: 2px
+				// background: $blue
+				// +pos(abs, null null 0 0)
+				// +transition(all,0.5s)
+			figure 
+				.serviceimg
+					display: block
+					overflow: hidden
+					img 
+						+transition(all,0.5s)
+				figcaption
+					padding: 10px 0
+					.servicename
+						line-height: 1.5
+						font-weight: 700
+						+fs(18rem)
+						a
+							// text-transform: uppercase
+							color: $main
+			&:hover
+				&:after
+					// width: 100%
+				figure 
+					.serviceimg
+						img 
+							+transform(scale3d(1.2,1.2,1))
+					figcaption 
+						.servicename
+							a 
+								color: $red
+	.carlist
+		.carcol
+			margin-bottom: 30px
+			figure 
+				border: 1px solid darken($white,10%)
+				+flexbox
+				flex-wrap: wrap
+				.carimg
+					width: 50%
+					overflow: hidden
+					+media-breakpoint-down(sm)
+						width: 100%
+					.slick-prev,.slick-next
+						display: block
+						+pos(abs, 50% null null null)
+						+transform(translateY(-50%))
+						z-index: 5
+						+fs(0)
+						width: 30px
+						height: 30px
+						line-height: 30px
+						text-align: center
+						color: $white
+						text-shadow: 0 0px 10px color-rgba($black,0.5)
+						// background: color-rgba($white,0.5)
+						&:before
+							content: ''
+							font-family: 'fontawesome'
+							+fs(32rem)
+					.slick-prev
+						left: 0px
+						// border-right: 1px solid $white
+						&:before
+							content: '\f104'
+					.slick-next
+						right: 0px
+						// border-left: 1px solid $white
+						&:before
+							content: '\f105'
+					.item
+						+pos(rel,null)
+						.caption
+							+pos(abs, null 0 0 0)
+							background: linear-gradient(color-rgba($black,0),color-rgba($black,0.8))
+							padding: 20px 15px
+							+fs(18rem)
+							color: $white
+							text-transform: uppercase
+							text-shadow: 0 3px 20px color-rgba($black,0.5)
+					img 
+						+media-breakpoint-down(md)
+							max-width: unset
+							height: 350px
+						+media-breakpoint-down(sm)
+							height: auto
+							max-width: 100%
+				figcaption
+					width: 50%
+					padding: 0px 70px
+					+flexbox
+					flex-wrap: wrap
+					align-items: center
+					align-content: center
+					+media-breakpoint-down(lg)
+						padding: 0px 40px
+					+media-breakpoint-down(sm)
+						width: 100%
+						padding: 30px
+					+media-breakpoint-down(xs)
+						
+					.carname
+						width: 100%
+						+fs(20rem)
+						font-weight: 700
+						text-transform: uppercase
+						margin-bottom: 20px
+						&:after
+							content: ''
+							display: block
+							width: 60px
+							height: 2px
+							background: $blue
+							margin-top: 10px
+						a 
+							color: $main
+					.cardes
+						width: 100%
+						color: darken($white,60%)
+						max-height: 230px
+						overflow: auto
+						// margin-bottom: 40px
+						&::-webkit-scrollbar-track
+							-webkit-box-shadow: none
+							background-color: $white
+						&::-webkit-scrollbar
+							width: 3px
+							background-color: $white
+						&::-webkit-scrollbar-thumb
+							background-color: darken($white,10%)
+							border: 2px solid none
+
+			&:nth-child(even)
+				figure 
+					.carimg
+						order: 2
+						+media-breakpoint-down(sm)
+							order: 1
+					figcaption
+						order: 1
+						+media-breakpoint-down(sm)
+							order: 2
+	.btn-book
+		background: $blue
+		color: $white
+		line-height: 40px
+		padding: 0px 20px
+		text-transform: uppercase
+		&:before
+			background: color-rgba($black,0.2)
+		&:hover
+
+.modal-open
+	padding-right: 0 !important
+.modal
+.modal-dialog
+	max-width: 500px
+	.bookingfrm
+		padding: 15px
+		.sitelogo
+			margin-bottom: 15px
+			img 
+				height: 40px
+		.modal-header
+			margin: 0
+			padding: 0
+			border: none
+			.close
+				+pos(abs, 10px 10px null null)
+				+fs(28rem)
+				color: $red
+				line-height: 1
+				opacity: 1
+				z-index: 100
+		.modal-title
+			font-weight: 700
+			color: $blue
+			margin-bottom: 10px
+			text-transform: uppercase
+			// +fs(18rem)
+			// color: $black
+			// font-weight: 700
+			// text-transform: uppercase
+			// margin-bottom: 15px
+			// &:after
+			// 	content: ''
+			// 	display: block
+			// 	width: 60px
+			// 	height: 2px
+			// 	background: $blue
+			// 	margin-top: 5px
+		.modal-body
+			padding: 0
+		.title
+			font-weight: 700
+			color: $blue
+			margin-bottom: 10px
+			text-transform: uppercase
+		.row
+			margin: 0px -5px
+		.form-group
+			padding: 0px 5px
+			label, .RadPicker
+				width: 100% !important
+			input, select, textarea
+				width: 100%
+				border: 1px solid darken($white,10%)
+				+bor-rad(0px)
+				padding: 10px 15px
+			select 
+				padding: 9px 15px
+			&.date
+				+pos(rel,null)
+				&:after
+					// content: '\f073'
+					// font-family: 'fontawesome'
+					// +pos(abs, null 15px 8px null)
+					// color: darken($white,40%)
+			.fa.fa-exclamation-triangle
+				top: unset
+				bottom: 10px
+				right: 10px
+		input[type="reset"]
+			display: none
+		.frm-btnwrap
+			padding: 0
+			label 
+				display: none
+		.frm-btn
+			// text-align: center
+		input[type="submit"]
+			display: inline-block
+			background: $blue
+			color: $white
+			border: none
+			width: auto
+			+bor-rad(0px)
+			line-height: 36px
+			padding: 0px 20px

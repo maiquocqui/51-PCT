@@ -1,0 +1,112 @@
++breadcrumb("Dịch vụ","img/breadcrumb/1.jpg")
+section.service-page.clearfix
+	.container
+		h1.pagetitle Dịch vụ cho thuê xe
+		.carlist.clearfix
+			.carcol
+				figure 
+					.carimg
+						.item
+							img(src="img/service/c1.jpg", alt="")
+							.caption Dịch vụ cho thuê xe cao cấp
+						.item
+							img(src="img/service/c2.jpg", alt="")
+							.caption Dịch vụ đưa đón CBCNV
+						.item
+							img(src="img/service/c3.jpg", alt="")
+							.caption Dịch vụ cung ứng lao động (Lái xe)
+						.item
+							img(src="img/service/c4.jpg", alt="")
+							.caption Dịch vụ xe đưa đón sân bay, phục vụ du lịch lễ hội
+						.item
+							img(src="img/service/c5.jpg", alt="")
+							.caption Dịch vụ cho thuê xe chuyên dụng
+					figcaption
+						h2.carname Các loại hình dịch vụ
+						.cardes.content
+							ul 
+								li Dịch vụ cho thuê xe cao cấp
+								li Dịch vụ đưa đón CBCNV
+								li Dịch vụ cung ứng lao động (lái xe)
+								li Dịch vụ xe đưa đón sân bay, phục vụ du lịch lễ hội
+								li Dịch vụ cho thuê xe chuyên dụng
+						//- a.hvr-sweep-to-right.btn-book(href="#" data-toggle='modal', data-target='#bookcar') Yêu cầu dịch vụ
+			.carcol
+				figure 
+					.carimg
+						.item
+							img(src="img/service/d1.jpg", alt="")
+							.caption Dòng xe 4 chỗ
+						.item
+							img(src="img/service/d2.jpg", alt="")
+							.caption Dòng xe 7 chỗ
+						.item
+							img(src="img/service/d3.jpg", alt="")
+							.caption Dòng xe 16 chỗ
+						.item
+							img(src="img/service/d4.jpg", alt="")
+							.caption Dòng xe 24 chỗ
+						.item
+							img(src="img/service/d5.jpg", alt="")
+							.caption Dòng xe 45 chỗ
+					figcaption
+						h2.carname Các dòng xe
+						.cardes.content
+							p Chúng tôi có đầy đủ các loại xe đa dạng về chủng loại 4, 7, 14, 16, 24, 29,... chỗ với các dòng xe chất lượng
+						//- a.hvr-sweep-to-right.btn-book(href="#") Yêu cầu dịch vụ
+		.btn-wrap.text-xs-center
+			a.hvr-shutter-out-horizontal.btn-book(href="#" data-toggle='modal', data-target='#bookcar') Yêu cầu dịch vụ
+		#bookcar.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+			.modal-dialog(role='document')
+				.modal-content.bookingfrm.clearfix
+					.modal-header
+						.sitelogo
+							img(src="img/logo.png", alt="")
+						h5.modal-title Đặt xe
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+					.modal-body
+						.title Thông tin yêu cầu
+						.row.flex.flex-wrap
+							.form-group.col-xs-12.col-md-6
+								label Hãng xe
+								select
+									option Toyota
+									//- option Xe 7 chỗ
+									//- option Xe 16 chỗ
+									//- option Xe 45 chỗ
+							.form-group.col-xs-12.col-md-6
+								label Loại xe
+								select
+									option Xe 4 chỗ
+									option Xe 7 chỗ
+									option Xe 16 chỗ
+									option Xe 45 chỗ
+							.form-group.col-xs-12
+								label Số lượng
+								input(type="text")
+							.form-group.col-xs-12.col-md-6.date
+								label Từ ngày
+								input(type="text", placeholder="vd: 30/05/2017")
+							.form-group.col-xs-12.col-md-6.date
+								label Đến ngày
+								input(type="text", placeholder="vd: 30/05/2017")
+							.form-group.col-xs-12
+								label Yêu cầu thêm
+								textarea(name="", cols="30", rows="3")
+						.title Thông tin khách hàng
+						.row.flex.flex-wrap
+							.form-group.col-xs-12.col-md-6
+								label Họ và tên
+								input(type="text")
+							.form-group.col-xs-12.col-md-6
+								label Điện thoại
+								input(type="text", name="")
+							.form-group.col-xs-12.col-md-6
+								label Email
+								input(type="text")
+							.form-group.col-xs-12.col-md-6
+								label Địa chỉ
+								input(type="text", placeholder="")
+						input(type="submit", value="Gửi")
+			

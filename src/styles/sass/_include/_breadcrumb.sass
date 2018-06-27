@@ -1,0 +1,57 @@
+.breadcrumbwrap
+	+pos(rel,null)
+	.breadcrumbimg
+		+pos(abs, 0 null 0 0)
+		right: 0
+		filter: brightness(90%)
+	.pagename
+		+pos(rel,null)
+		z-index: 5
+		// padding: 15px 30px
+		// background: color-rgba($blue,0.8)
+		+fs(32rem)
+		text-transform: uppercase
+		color: $white
+		font-weight: 700
+		float: left
+		margin-top: 200px
+		margin-bottom: 10px
+		+media-breakpoint-down(md)
+			margin-top: 150px
+			+fs(28rem)
+		+media-breakpoint-down(sm)
+			margin-top: 120px
+			+fs(24rem)
+		&:after
+			content: ''
+			display: block
+			width: 60px
+			height: 1px
+			background: white
+			opacity: 0.8
+			margin-top: 5px
+	.breadcrumbcontent
+		// background: color-rgba($black,0.5)
+		+pos(rel,null)
+		z-index: 5
+	.breadcrumb
+		width: 100%
+		clear: both
+		margin: 0
+		padding: 10px 0
+		+bor-rad(0)
+		background: none
+		li 
+			display: inline-block
+			color: color-rgba($white,0.8)
+			&:after
+				content: '\f105'
+				font-family: 'fontawesome'
+				margin: 0px 5px
+			&:last-child
+				&:after
+					display: none
+			a, span
+				color: $white
+				&:hover
+					text-decoration: underline

@@ -1,0 +1,98 @@
+.bannerwrap
+	+pos(rel,null)
+	width: 100%
+	height: 100vh !important
+	overflow: hidden !important
+	.container
+		+pos(rel,null)
+	video
+		+pos(abs, 0 null 0 0)
+		right: 0
+		width: 100%
+		height: 100%
+		overflow: hidden
+		background-size: contain
+		object-fit: cover
+	// #rev_slider_202_1_forcefullwidth
+	// 	+pos(abs !important, 0 null 0 0)
+	// 	right: 0
+	// 	z-index: 5
+	.banner
+		.slick-dots
+			+pos(abs, null 0 30px 0)
+			text-align: center
+			li 
+				display: inline-block
+				height: 2px
+				width: 50px
+				background: darken($white,60%)
+				opacity: 0.3
+				+transition(all,0.3s)
+				+ li 
+					margin-left: 7px
+				button
+					display: none
+				&.slick-active
+					opacity: 1
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			z-index: 10
+			color: $white
+			opacity: 0
+			+transition(all,0.3s)
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+fs(42rem)
+		.slick-prev
+			left: 0px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: 0px
+			&:before
+				content: '\f105'
+		&:hover
+			.slick-prev, .slick-next
+				opacity: 1
+			.slick-prev
+				left: 20px
+			.slick-next
+				right: 20px
+		.item
+			a 
+				display: block
+				height: 100vh
+	.rev_slider_wrapper
+		+pos(rel,null)
+		z-index: 5
+	.rev_slider 
+		.tp-caption
+			z-index: 10
+			// font-family: 'Raleway'
+			font-weight: 300
+			+fs(26rem)
+			text-align: center
+			color: color-rgba($white,0.8)
+			+media-breakpoint-down(xs)
+				+fs(52rem)
+	.view-more-slide
+		+pos(abs,100% null null 50%)
+		+transform(translate(-50%))
+		z-index: 10
+		margin-top: 30px
+		display: block
+		a
+			font-size: 15px
+			color: $white
+			padding: 8px 20px
+			border: 1px solid $white
+			+bor-rad(4px)
+			text-transform: uppercase
+			cursor: pointer
+			&:hover
+				background: $yellow
+				border: 1px solid $yellow
+				color: $white

@@ -1,0 +1,1699 @@
+// FANCY BOX
+
+// .fancybox-overlay
+// 	background: color-rgba($white,0.8)
+// .fancybox-close
+// 	background: $red
+// 	+bor-rad(50%)
+// 	color: color-rgba($white,0.8)
+// 	+fs(36rem)
+// 	font-weight: lighter
+// 	line-height: 36px
+// 	text-align: center
+// 	+transform(rotateZ(45deg))
+// 	+transition(all,0.3s)
+// 	&:before
+// 		content: "+"
+// 	&:hover
+// 		color: $white
+// 		text-shadow: 0 0 10px $white
+// .fancybox-nav
+// 	span 
+// 		display: block
+// 		width: 40px
+// 		height: 40px
+// 		+fs(28rem)
+// 		line-height: 32px
+// 		text-align: center
+// 		color: $white
+// 		border: 2px solid $white
+// 		+bor-rad(50%)
+// 		visibility: visible
+// 		opacity: 0.5
+// 		+transition(all,0.3s)
+// 		&:hover
+// 			opacity: 1
+// 			background: $white
+// 			color: $red
+// 	&.fancybox-prev
+// 		span
+// 			&:before
+// 				content: "\f104"
+// 				font-family: 'fontawesome'
+// 	&.fancybox-next
+// 		span
+// 			&:before
+// 				content: "\f105"
+// 				font-family: 'fontawesome'
+
+.fancybox-bg
+	background: color-rgba($black,0.8)
+.fancybox-button--close
+	background: $red
+	+transition(all,0.5s)
+	&:hover
+		background: darken($red,10%)
+
+
+// END FANCY BOX
+
+// ECOMERCE
+.input-number
+	+pos(rel,null)
+	width: 90px
+	.btn-spin
+		+pos(abs,0 null null null)
+		width: 30px
+		height: 30px
+		line-height: 30px
+		text-align: center
+		cursor: pointer
+		&.btn-dec
+			left: 0
+		&.btn-inc
+			right: 0
+	input
+		width: 100%
+		border: 1px solid darken($white,10%)
+		+bor-rad(5px)
+		+fs(17rem)
+		font-weight: 700
+		color: $black
+		text-align: center
+		padding: 4px 10px
+
+// USER CONTROL PANEL
+
+// login
+// .login-page
+// 	background: darken($white,3%)
+// 	.login-panel
+// 		margin: 100px 0
+// 		background: $white
+// 		box-shadow: 0 0 50px color-rgba($black,0.1)
+// 		+bor-rad(5px)
+// 		+media-breakpoint-down(lg)
+// 			margin: 60px 0
+// .login-form
+// 	width: 40%
+// 	padding: 50px
+// 	+media-breakpoint-down(md)
+// 		width: 100%
+// 		order: 2
+// 		padding: 50px 150px
+// 	+media-breakpoint-down(sm)
+// 		padding: 50px 100px
+// 	+media-breakpoint-down(xs)
+// 		padding: 20px
+// 	.sitelogo
+// 		text-align: center
+// 		margin-bottom: 50px
+// 		img
+// 			height: 80px
+// 		+media-breakpoint-down(xs)
+// 			margin-bottom: 30px
+// 	.title
+// 		+fs(16rem)
+// 		font-weight: 500
+// 		text-transform: uppercase
+// 		border-left: 3px solid $red
+// 		padding-left: 10px
+// 		margin-bottom: 5px
+// 		// &:after
+// 		// 	content: ''
+// 		// 	display: block
+// 		// 	width: 50px
+// 		// 	height: 2px
+// 		// 	background: $red
+// 		// 	margin: 10px auto
+// 	.module-title
+// 		+fs(14rem)
+// 		// font-weight: 300
+// 		color: darken($white,60%)
+// 		margin-bottom: 20px
+// 		a 
+// 			color: $red
+// 			&:hover
+// 				lighten($red,10%)
+// 	.form-group
+// 		margin-bottom: 30px
+// 		label
+// 			color: darken($white,40%)
+// 			text-transform: uppercase
+// 			+fs(15rem)
+// 		input
+// 			width: 100%
+// 			+fs(18rem)
+// 			border: none
+// 			border-bottom: 1px solid darken($white,15%)
+// 			padding: 10px 0
+// 			+transition(all,0.5s)
+// 			&:active, &:hover, &:focus
+// 				border-color: darken($white,40%)
+// 	.forget
+// 		+fs(14rem)
+// 		color: darken($white,40%)
+// 		margin-bottom: 40px
+// 		+media-breakpoint-down(xs)
+// 			margin-bottom: 30px
+// 		a 
+// 			color: $red
+// 			&:hover
+// 				color: $black
+// 	.btn-login
+// 		margin: 0 auto
+// 		width: 200px
+// 		text-align: center
+// 		+pos(rel,null)
+// 		color: $white
+// 		background: $red
+// 		display: block
+// 		+media-breakpoint-down(xs)
+// 			width: 100%
+// 		&:before
+// 			background: darken($red,10%)
+// 		&:after
+// 			content: '\f105'
+// 			font-family: 'fontawesome'
+// 			+pos(abs, 10px 15px null null)
+// 	input[type='reset']
+// 		display: none
+// 	input[type="submit"]
+// 		width: 100%
+// 		color: $white
+// 		background: none
+// 		padding: 13px 60px
+// 		border: none
+// 		+fs(16rem)
+// .login-bg
+// 	width: 60%
+// 	+pos(rel,null)
+// 	overflow: hidden
+// 	padding: 50px
+// 	+media-breakpoint-down(md)
+// 		width: 100%
+// 		order: 1
+// 	+media-breakpoint-down(sm)
+// 		padding: 30px
+// 	.login-img
+// 		+pos(abs, 0 null 0 0)
+// 		right: 0
+// 		.login-overlay
+// 			display: block
+// 			+pos(abs, 0 null 0 0)
+// 			right: 0
+// 			background: $black
+// 			opacity: 0.5
+// 			z-index: 1
+// 		img
+// 			height: 100%
+// 			width: auto
+// 			max-width: unset
+// 			filter: grayscale(100%)
+// 			+media-breakpoint-down(md)
+// 				height: auto
+// 				width: 100%
+// 			+media-breakpoint-down(sm)
+// 				+transform(scale3d(1.1,1.1,1))
+// 			+media-breakpoint-down(xs)
+// 				width: auto
+// 				height: 100%
+// 	.login-des
+// 		+pos(rel,null)
+// 		z-index: 1
+// 		color: $white
+// 		.title
+// 			+fs(46rem)
+// 			font-weight: 300
+// 			margin-bottom: 20px
+// 			// opacity: 0.8
+// 			+media-breakpoint-down(sm)
+// 				+fs(36rem)
+// 				margin-bottom: 10px
+// 		.module-title
+// 			+fs(26rem)
+// 			font-weight: 200
+// 			opacity: 0.9
+// 			+media-breakpoint-down(sm)
+// 				+fs(20rem)
+// 		.des
+// 			margin-top: 180px
+// 			+fs(20rem)
+// 			+media-breakpoint-down(md)
+// 				margin-top: 30px
+// 			+media-breakpoint-down(sm)
+// 				margin-top: 10px
+// 			span 
+// 				opacity: 0.8
+// 				font-weight: 200
+// 				display: inline-block
+// 				margin-right: 10px
+// 			a 
+// 				display: inline-block
+// 				opacity: 1
+// 				font-weight: 300
+// 				+fs(32rem)
+// 				color: $white
+// 				+media-breakpoint-down(xs)
+// 					+fs(26rem)
+// 				&:after
+// 					content: '\f105'
+// 					font-family: 'fontawesome'
+// 					margin-left: 5px
+// 				&:hover
+// 					color: $red
+
+
+.login-page
+	// background: darken($white,3%)
+	.login-panel
+		margin: 60px 0
+		background: $white
+		// box-shadow: 0 0 50px color-rgba($black,0.1)
+		+bor-rad(5px)
+		+media-breakpoint-down(lg)
+			margin: 60px 0
+	.sitelogo
+		text-align: center
+		margin-bottom: 40px
+		width: 100%
+		img
+			height: 80px
+		+media-breakpoint-down(xs)
+			margin-bottom: 30px
+	.headtitle
+		text-align: center
+		+fs(18rem)
+		margin-bottom: 30px
+		&:after
+			content: ''
+			margin: 10px auto
+.login-form
+	width: 100%
+	margin: 0 auto
+	.title
+		+fs(24rem)
+		font-weight: 500
+		text-transform: uppercase
+		border-left: 3px solid $red
+		padding-left: 10px
+		margin-bottom: 30px
+		// &:after
+		// 	content: ''
+		// 	display: block
+		// 	width: 50px
+		// 	height: 2px
+		// 	background: $red
+		// 	margin: 10px auto
+	.module-title
+		+fs(14rem)
+		// font-weight: 300
+		color: darken($white,60%)
+		margin-bottom: 20px
+		a 
+			color: $red
+			&:hover
+				lighten($red,10%)
+	.form-group
+		margin-bottom: 20px
+		+pos(rel,null)
+		label
+			color: darken($white,40%)
+			text-transform: uppercase
+			+fs(18rem)
+			display: block
+			width: 50px
+			height: 40px
+			line-height: 40px
+			text-align: center
+			+pos(abs, 6px null null 0)
+			border-right: 1px solid darken($white,10%)
+			// display: none
+		input
+			width: 100%
+			+fs(18rem)
+			border: 1px solid darken($white,15%)
+			+bor-rad(5px)
+			padding: 15px 30px 15px 60px
+			+transition(all,0.5s)
+			&:active, &:hover, &:focus
+				border-color: darken($white,40%)
+	.forget
+		+fs(14rem)
+		color: darken($white,40%)
+		margin-bottom: 30px
+		a 
+			color: $red
+			&:hover
+				color: $black
+	.btn-login
+		margin: 0 auto
+		width: 100%
+		text-align: center
+		+pos(rel,null)
+		color: $white
+		background: $red
+		display: block
+		+bor-rad(5px)
+		overflow: hidden
+		+media-breakpoint-down(xs)
+			width: 100%
+		&:before
+			background: darken($red,10%)
+		&:after
+			content: '\f105'
+			font-family: 'fontawesome'
+			+pos(abs, 12px 15px null null)
+	input[type='reset']
+		display: none
+	input[type="submit"]
+		width: 100%
+		color: $white
+		background: none
+		padding: 15px 60px
+		border: none
+		text-transform: uppercase
+		+fs(16rem)
+	.go-signup
+		text-align: center
+		margin-top: 15px
+		a 
+			display: block
+			clear: both
+			color: $red
+			&:hover
+				color: $black
+.login-bg
+	width: 60%
+	+pos(rel,null)
+	overflow: hidden
+	padding: 50px
+	+bor-rad(5px)
+	+media-breakpoint-down(md)
+		width: 100%
+		order: 1
+	+media-breakpoint-down(sm)
+		padding: 30px
+	.login-img
+		+pos(abs, 0 null 0 0)
+		right: 0
+		.login-overlay
+			display: block
+			+pos(abs, 0 null 0 0)
+			right: 0
+			background: $black
+			opacity: 0.5
+			z-index: 1
+		img
+			height: 100%
+			width: auto
+			max-width: unset
+			filter: grayscale(100%)
+			+media-breakpoint-down(md)
+				height: auto
+				width: 100%
+			+media-breakpoint-down(sm)
+				+transform(scale3d(1.1,1.1,1))
+			+media-breakpoint-down(xs)
+				width: auto
+				height: 100%
+	.login-des
+		+pos(rel,null)
+		z-index: 1
+		color: $white
+		.title
+			+fs(46rem)
+			font-weight: 300
+			margin-bottom: 20px
+			// opacity: 0.8
+			+media-breakpoint-down(sm)
+				+fs(36rem)
+				margin-bottom: 10px
+		.module-title
+			+fs(26rem)
+			font-weight: 200
+			opacity: 0.9
+			+media-breakpoint-down(sm)
+				+fs(20rem)
+		.des
+			margin-top: 180px
+			+fs(20rem)
+			+media-breakpoint-down(md)
+				margin-top: 30px
+			+media-breakpoint-down(sm)
+				margin-top: 10px
+			span 
+				opacity: 0.8
+				font-weight: 200
+				display: inline-block
+				margin-right: 10px
+			a 
+				display: inline-block
+				opacity: 1
+				font-weight: 300
+				+fs(32rem)
+				color: $white
+				+media-breakpoint-down(xs)
+					+fs(26rem)
+				&:after
+					content: '\f105'
+					font-family: 'fontawesome'
+					margin-left: 5px
+				&:hover
+					color: $red
+
+// signup
+.signup-page
+	// background: darken($white,3%)
+	.signup-panel
+		margin: 40px 0
+		background: $white
+		// box-shadow: 0 0 50px color-rgba($black,0.1)
+		+bor-rad(3px)
+	.headtitle
+		text-align: center
+		+fs(18rem)
+		margin-bottom: 15px
+		&:after
+			content: ''
+			margin: 5px auto
+.signup-form
+	width: 100%
+	+pos(rel,null)
+	// &:before
+	// 	content: ''
+	// 	display: block
+	// 	width: 1px
+	// 	height: 100%
+	// 	background: darken($white,10%)
+	// 	+pos(abs, 0 null null 0)
+	.title
+		+fs(24rem)
+		font-weight: 500
+		text-transform: uppercase
+		border-left: 3px solid $red
+		padding-left: 10px
+		margin-bottom: 30px
+		// &:after
+		// 	content: ''
+		// 	display: block
+		// 	width: 50px
+		// 	height: 2px
+		// 	background: $red
+		// 	margin: 10px auto
+	.module-title
+		+fs(14rem)
+		// font-weight: 300
+		color: darken($white,60%)
+		margin-bottom: 20px
+		a 
+			color: $red
+			&:hover
+				lighten($red,10%)
+	.form-group
+		margin-bottom: 10px
+		label
+			color: darken($white,40%)
+			text-transform: uppercase
+			+fs(13rem)
+			margin-bottom: 5px
+		input, select
+			width: 100%
+			+fs(15rem)
+			border: 1px solid darken($white,15%)
+			+bor-rad(5px)
+			padding: 10px 15px
+			+transition(all,0.5s)
+			&:active, &:hover, &:focus
+				border-color: darken($white,40%)
+		select 
+			padding: 9px 15px
+	.gender-select
+		ul 
+			padding: 10px 0 0
+			&:after
+				display: table
+				content: ''
+				width: 100%
+				clear: both
+			li 
+				width: 150px
+				float: left
+		input[type="radio"]
+			display: none
+			+ label 
+				font-weight: 500
+				color: $main
+				padding-left: 30px
+				+pos(rel,null)
+				+transition(all,0.5s)
+				&:hover
+					color: $black
+				&:before
+					content: ''
+					display: block
+					width: 16px
+					height: 16px
+					border: 1px solid darken($white,40%)
+					opacity: 0.5
+					+bor-rad(50%)
+					+pos(abs, 1px null null 0)
+					+transition(all,0.5s)
+				&:after
+					content: ''
+					display: block
+					width: 14px
+					height: 14px
+					border: 3px solid $white
+					background: $red
+					opacity: 0
+					+bor-rad(50%)
+					+pos(abs, 2px null null 1px)
+					+transition(all,0.5s)
+			&:checked
+				+ label
+					&:before, &:after
+						opacity: 1
+	.birthday
+		ul 
+			margin: 0 -10px
+			li 
+				width: 33.33%
+				float: left
+				padding: 0 10px
+	
+	.confirm
+		padding-top: 10px
+		.check-group
+			input[type='checkbox']
+				display: none
+				+ label
+					color: darken($white,60%)
+					font-weight: 300
+					padding-left: 30px
+					+fs(14rem)
+					+pos(rel,null)
+					+transition(all,0.5s)
+					&:hover
+						color: $black
+					&:before
+						content: ''
+						display: block
+						width: 16px
+						height: 16px
+						border: 1px solid darken($white,40%)
+						opacity: 0.5
+						+pos(abs, 1px null null 0)
+						+transition(all,0.5s)
+					&:after
+						content: '\f00c'
+						font-family: 'fontawesome'
+						display: block
+						line-height: 14px
+						+fs(14rem)
+						color: $red
+						opacity: 0
+						+pos(abs, 2px null null 1px)
+						+transition(all,0.5s)
+				&:checked
+					+ label
+						&:before, &:after
+							opacity: 1
+		.confirm-des
+			margin: 15px 0 20px
+			color: darken($white,60%)
+			+fs(14rem)
+			a 
+				color: $red
+				&:hover
+					color: $black
+	.btn-signup
+		margin: 0 auto
+		width: 160px
+		text-align: center
+		+pos(rel,null)
+		color: $white
+		background: $red
+		display: block
+		+bor-rad(5px)
+		+media-breakpoint-down(xs)
+			width: 100%
+		&:before
+			background: darken($red,10%)
+		&:after
+			content: '\f105'
+			font-family: 'fontawesome'
+			+pos(abs, 8px 15px null null)
+	input[type='reset']
+		display: none
+	input[type="submit"]
+		width: 100%
+		color: $white
+		background: none
+		padding: 12px 40px
+		border: none
+		text-transform: uppercase
+		+fs(16rem)
+.signup-bg
+	width: 40%
+	+pos(rel,null)
+	overflow: hidden
+	padding: 50px
+	+media-breakpoint-down(md)
+		width: 100%
+		order: 1
+	+media-breakpoint-down(sm)
+		padding: 30px
+	.signup-img
+		+pos(abs, 0 null 0 0)
+		right: 0
+		.signup-overlay
+			display: block
+			+pos(abs, 0 null 0 0)
+			right: 0
+			background: $black
+			opacity: 0.5
+			z-index: 1
+		img
+			height: 100%
+			width: auto
+			max-width: unset
+			filter: grayscale(100%)
+			+media-breakpoint-down(md)
+				height: auto
+				width: 100%
+			+media-breakpoint-down(sm)
+				+transform(scale3d(1.1,1.1,1))
+			+media-breakpoint-down(xs)
+				width: auto
+				height: 100%
+	.signup-des
+		+pos(rel,null)
+		z-index: 1
+		color: $white
+		.title
+			+fs(46rem)
+			font-weight: 300
+			margin-bottom: 20px
+			// opacity: 0.8
+			+media-breakpoint-down(sm)
+				+fs(36rem)
+				margin-bottom: 10px
+		.module-title
+			+fs(26rem)
+			font-weight: 200
+			opacity: 0.9
+			+media-breakpoint-down(sm)
+				+fs(20rem)
+		.des
+			+fs(20rem)
+			span 
+				opacity: 0.8
+				font-weight: 200
+				display: inline-block
+				margin-right: 10px
+			a 
+				display: inline-block
+				opacity: 1
+				font-weight: 300
+				+fs(24rem)
+				color: $white
+				+media-breakpoint-down(xs)
+					+fs(26rem)
+				&:after
+					content: '\f105'
+					font-family: 'fontawesome'
+					margin-left: 5px
+				&:hover
+					color: $red
+
+// USER SIDEBAR
+
+.user-sidebar
+	margin: 60px 0 20px
+	+pos(rel,null)
+	+media-breakpoint-down(md)
+		&:after
+			content: '\f107'
+			font-family: 'fontawesome'
+			+pos(abs, 50% 15px null null)
+			+transform(translateY(-50%))
+			color: $white
+			+fs(24rem)
+	.userinfo
+		background: $lblack
+		// border-left: 5px solid $red
+		figure
+			padding: 10px
+			&:after
+				content: ''
+				display: table
+				width: 100%
+				clear: both
+			.user-img
+				display: block
+				width: 80px
+				float: left
+				+media-breakpoint-down(lg)
+					width: 60px
+			figcaption
+				display: table-cell
+				padding: 15px
+				+media-breakpoint-down(lg)
+					padding: 7px 15px
+				.title
+					color: $white
+					opacity: 0.8
+					font-weight: 300
+					+media-breakpoint-down(lg)
+						+fs(13rem)
+				.user-name
+					text-transform: uppercase
+					font-weight: 500
+					+fs(18rem)
+					color: $white
+					+media-breakpoint-down(lg)
+						+fs(15rem)
+.user-sidelink
+	background: darken($white,5%)
+	margin-bottom: 60px
+	+media-breakpoint-down(md)
+		margin-bottom: 30px
+		display: none
+	ul 
+		li 
+			width: 100%
+			&:before
+				background: darken($white,7%)
+			a 
+				display: block
+				color: $main
+				padding: 9px 30px
+				&:hover
+					color: $red
+			&.active
+				background: darken($white,10%)
+				border-left: 3px solid $red
+				a 
+					font-weight: bold
+
+// user page
+
+.user-page
+	margin-top: 60px
+	+pos(rel,null)
+	+media-breakpoint-down(md)
+		margin-top: 0
+	.postname
+		+fs(24rem)
+		line-height: 1.5
+		margin-bottom: 20px
+		&:after
+			margin-top: 5px
+	.posttitle
+		+fs(18rem)
+		line-height: 1.5
+		margin: 0 0 20px
+		min-height: 27px
+		// border-left: 0
+		// padding-left: 0
+		// &:before
+		// 	content: '//'
+		// 	color: darken($red,5%)
+		// 	margin-right: 10px
+	.link
+		+fs(13rem)
+		color: $main
+		+pos(abs, 3px 0 null null)
+		&:after
+			content: '\f105'
+			font-family: 'fontawesome'
+			margin-left: 10px
+		&:hover
+			color: $red
+	.btn-addaddr
+		+fs(14rem)
+		color: $main
+		+pos(abs, 7px 0 null null)
+		&:before
+			content: '\f044'
+			font-family: 'fontawesome'
+			margin-right: 5px
+		&:hover
+			color: $red
+	.table
+		border-bottom: 1px solid darken($white,10%)
+		+fs(14rem)
+		margin-bottom: 0
+		a 
+			color: $red
+			// &:before
+			// 	content: '\f00e'
+			// 	font-family: 'fontawesome'
+			// 	margin-right: 5px
+			&:hover
+				color: $black
+		th 
+			border: none
+			border-top: 2px solid $red
+			// background: lighten($red,45%)
+			background: $lblack
+			color: $white
+			white-space: nowrap
+		td 
+			border: none
+		th, td 
+			white-space: nowrap
+			&:nth-child(3)
+				white-space: normal
+				+media-breakpoint-down(sm)
+					white-space: nowrap
+		tr 
+			&:nth-child(even)
+				background: darken($white,3%)
+
+.account-info
+	+pos(rel,null)
+	margin-bottom: 30px
+	+media-breakpoint-down(md)
+		margin-bottom: 20px
+	.info-detail
+		border: 1px solid darken($white,15%)
+		+bor-rad(3px)
+		padding: 15px 20px
+		.group
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+			.label
+				float: left
+				width: 100px
+				cursor: 
+				+media-breakpoint-down(xs)
+					float: none
+					display: block
+					color: darken($white,40%)
+			.detail
+				display: table-cell
+				font-weight: 500
+				+media-breakpoint-down(xs)
+					float: none
+					display: block
+					font-weight: bold
+.account-form
+	width: 50%
+	+media-breakpoint-down(lg)
+		width: 60%
+	+media-breakpoint-down(md)
+		width: 70%
+	+media-breakpoint-down(xs)
+		width: 100%
+	.form-group
+		margin-bottom: 15px
+		label
+			text-transform: uppercase
+			+fs(13rem)
+			color: darken($white,60%)
+			margin-bottom: 5px
+		input, select
+			width: 100%
+			border: 1px solid darken($white,15%)
+			padding: 10px 15px
+			font-size: 0.875rem
+			-webkit-transition: all, 0.3s
+			transition: all, 0.3s
+			&:hover, &:active, &:focus
+				border-color: darken($white,40%)
+	.gender-select
+		ul 
+			padding: 10px 0 0
+			&:after
+				display: table
+				content: ''
+				width: 100%
+				clear: both
+			li 
+				width: 50%
+				float: left
+		input[type="radio"]
+			display: none
+			+ label 
+				font-weight: 500
+				color: $main
+				padding-left: 30px
+				text-transform: none
+				+fs(15rem)
+				+pos(rel,null)
+				+transition(all,0.5s)
+				&:hover
+					color: $black
+				&:before
+					content: ''
+					display: block
+					width: 16px
+					height: 16px
+					border: 1px solid darken($white,40%)
+					opacity: 0.5
+					+bor-rad(50%)
+					+pos(abs, 2px null null 0)
+					+transition(all,0.5s)
+				&:after
+					content: ''
+					display: block
+					width: 14px
+					height: 14px
+					border: 3px solid $white
+					background: $red
+					opacity: 0
+					+bor-rad(50%)
+					+pos(abs, 3px null null 1px)
+					+transition(all,0.5s)
+			&:checked
+				+ label
+					&:before, &:after
+						opacity: 1
+	.birthday
+		ul 
+			margin: 0 -10px
+			li 
+				width: 33.33%
+				float: left
+				padding: 0 10px
+				+media-breakpoint-down(xs)
+					select
+						+fs(14rem)
+						padding: 10px 10px
+	.check-group
+		input[type='checkbox']
+			display: none
+			+ label
+				color: darken($white,60%)
+				padding-left: 30px
+				+fs(14rem)
+				+pos(rel,null)
+				+transition(all,0.5s)
+				&:hover
+					color: $black
+				&:before
+					content: ''
+					display: block
+					width: 16px
+					height: 16px
+					border: 1px solid darken($white,40%)
+					opacity: 0.5
+					+pos(abs, 1px null null 0)
+					+transition(all,0.5s)
+				&:after
+					content: '\f00c'
+					font-family: 'fontawesome'
+					display: block
+					line-height: 14px
+					+fs(16rem)
+					color: $red
+					opacity: 0
+					+pos(abs, 2px null null 1px)
+					+transition(all,0.5s)
+			&:checked
+				+ label
+					&:before, &:after
+						opacity: 1
+	.check-group
+		margin-bottom: 15px
+	.changepw-form
+		display: none
+	input[type='submit']
+		color: $white
+		background: $red
+		padding: 12px 30px
+		border: none
+		text-transform: uppercase
+		margin: 5px 0 40px
+		+transition(all,0.5s)
+		&:hover
+			background: darken($red,10%)
+
+.coin-info
+	@extend .account-info
+	height: 100%
+	margin-bottom: 30px
+	+pos(rel,null)
+	padding-top: 47px
+	+media-breakpoint-down(md)
+		padding-top: 0
+	.info-detail
+		min-height: 86px
+		.detail
+			+media-breakpoint-up(md)
+				line-height: 54px
+			strong 
+				color: $red
+
+.coin-page
+	.notification
+		color: $red
+		margin-bottom: 10px
+	.coin-amount
+		border: 1px solid darken($white,15%)
+		+bor-rad(3px)
+		padding: 10px 15px
+		margin-bottom: 10px
+		strong
+			color: $red
+	.coin-history
+		padding-top: 20px
+		margin-bottom: 20px
+
+.cart-history
+	margin-bottom: 30px
+	+pos(rel,null)
+	.pages
+		margin: 20px 0
+		.pagination 
+			li
+				width: 36px
+				height: 36px
+				line-height: 36px
+	.module-title
+		margin-bottom: 20px
+	.content
+		margin-bottom: 20px
+		p
+			margin-bottom: 5px
+	.table-responsive
+		margin-bottom: 20px
+	.total-amount
+		float: right
+		width: 360px
+		.label
+			width: 180px
+			float: left
+			text-align: right
+			padding-right: 10px
+		.value
+			width: 180px
+			float: left
+			text-align: left
+			font-weight: 500
+			padding-left: 10px
+	.btn-back
+		clear: both
+		margin-bottom: 30px
+		&:hover
+			background: $lblack
+			color: $white
+
+.address-info
+	margin-bottom: 60px
+	+pos(rel,null)
+	.address-list
+		margin: 0 -10px
+	.address-col
+		width: 50%
+		padding: 0 10px
+		margin-bottom: 20px
+		+media-breakpoint-down(sm)
+			width: 100%
+		.address
+			border: 1px solid darken($white,15%)
+			padding: 15px 20px
+			+bor-rad(3px)
+			+pos(rel,null)
+			height: 100%
+			&.default
+				border: 1px dashed $black
+			.type
+				+pos(abs, 5px 10px null null)
+				text-transform: uppercase
+				+fs(13rem)
+				color: $red
+				font-weight: 500
+			.name
+				+fs(15rem)
+				font-weight: bold
+				text-transform: uppercase
+				margin-bottom: 5px
+			.addr-detail
+				+fs(14rem)
+				color: darken($white,60%)
+				margin-bottom: 10px
+			.btn-editaddr
+				display: inline-block
+				background: darken($white,5%)
+				color: $main
+				padding: 7px 20px
+				+fs(13rem)
+				&:after
+					content: '\f040'
+					font-family: 'fontawesome'
+					margin-left: 5px
+				&:hover
+					color: $red
+					background: darken($white,10%)
+	.address-form
+		width: 50%
+		+media-breakpoint-down(lg)
+			width: 60%
+		+media-breakpoint-down(md)
+			width: 70%
+		+media-breakpoint-down(xs)
+			width: 100%
+		.form-group
+			margin-bottom: 15px
+			label
+				text-transform: uppercase
+				+fs(13rem)
+				color: darken($white,60%)
+				margin-bottom: 5px
+			input, select, textarea
+				width: 100%
+				border: 1px solid darken($white,15%)
+				padding: 10px 15px
+				font-size: 0.875rem
+				-webkit-transition: all, 0.3s
+				transition: all, 0.3s
+				&:hover, &:active, &:focus
+					border-color: darken($white,40%)
+		input[type="submit"]
+			color: $white
+			background: $red
+			padding: 12px 30px
+			border: none
+			text-transform: uppercase
+			margin: 5px 0 40px
+			+transition(all,0.5s)
+			&:hover
+				background: darken($red,10%)
+		.check-group
+			input[type='checkbox']
+				display: none
+				+ label
+					color: darken($white,60%)
+					font-weight: 300
+					padding-left: 30px
+					+fs(14rem)
+					+pos(rel,null)
+					+transition(all,0.5s)
+					text-transform: none
+					&:hover
+						color: $black
+					&:before
+						content: ''
+						display: block
+						width: 16px
+						height: 16px
+						border: 1px solid darken($white,40%)
+						opacity: 0.5
+						+pos(abs, 1px null null 0)
+						+transition(all,0.5s)
+					&:after
+						content: '\f00c'
+						font-family: 'fontawesome'
+						display: block
+						line-height: 14px
+						+fs(16rem)
+						color: $red
+						opacity: 0
+						+pos(abs, 2px null null 1px)
+						+transition(all,0.5s)
+				&:checked
+					+ label
+						&:before, &:after
+							opacity: 1
+
+.wishlist
+	.wishlist-product
+		margin-bottom: 20px
+		.product
+			padding: 20px 0
+			border-bottom: 1px solid darken($white,10%)
+			figure
+				.product-img
+					display: block
+					width: 130px
+					height: 130px
+					padding: 10px
+					text-align: center
+					border: 1px solid darken($white,20%)
+					float: left
+					+media-breakpoint-down(xs)
+						width: 100%
+						height: auto
+						margin-bottom: 15px
+				figcaption
+					display: block
+					width: calc(100% - 130px)
+					float: left
+					padding: 15px 0px 15px 20px
+					+media-breakpoint-down(sm)
+						padding: 0 0 0 20px
+					+media-breakpoint-down(xs)
+						padding-left: 0
+						width: 100%
+					.product-info
+						float: left
+						+media-breakpoint-down(sm)
+							width: 100%
+							float: none
+					.product-name
+						display: inline-block
+						+fs(13rem)
+						text-transform: uppercase
+						border-left: 3px solid $red
+						padding-left: 10px
+						margin-bottom: 5px
+						+media-breakpoint-down(xs)
+							display: block
+						a 
+							color: $main
+							+fs(18rem)
+							font-weight: bold
+					.size
+						color: darken($white,60%)
+						+media-breakpoint-down(xs)
+							display: block
+						&:before
+							content: '|'
+							margin: 0 10px
+							+media-breakpoint-down(xs)
+								display: none
+					.product-category
+						+fs(13rem)
+						text-transform: uppercase
+						color: darken($white,40%)
+						margin-bottom: 17px
+						// width: 100%
+						+media-breakpoint-down(sm)
+							margin-bottom: 5px
+					.product-price
+						margin-bottom: 5px
+						+media-breakpoint-down(xs)
+							margin-bottom: 15px
+						.old
+							display: inline-block
+							+fs(16rem)
+							color: darken($white,40%)
+							text-decoration: line-through
+							font-style: italic
+						.new
+							display: inline-block
+							+fs(28rem)
+							font-weight: 700
+							margin-left: 5px
+							+media-breakpoint-down(sm)
+								// +fs(24rem)
+					.button
+						float: right
+						+media-breakpoint-down(sm)
+							width: 100%
+							float: none
+					.btn-addtocart
+						display: inline-block
+						padding: 7px 20px
+						color: $white
+						+fs(13rem)
+						background: $red
+						text-transform: uppercase
+						+transition(all,0.5s)
+						+media-breakpoint-down(xs)
+							width: calc(100% - 42px)
+						&:before
+							content: '\f07a'
+							font-family: 'fontawesome'
+							margin-right: 5px
+						&:hover
+							background: darken($red,10%)
+					.btn-removecart
+						display: inline-block
+						margin-left: 5px
+						width: 33px
+						height: 33px
+						background: darken($white,10%)
+						+transition(all,0.5s)
+						&:hover
+							background: darken($white,20%)
+							color: $red
+
+
+
+.RadCaptcha
+	#ctl00_altContent2_ctl01_captcha_ctl01
+		float: left
+		+ p 
+			float: left
+			margin-top: 0
+	span
+		+fs(13rem)
+		color: $red
+		margin-bottom: 5px
+		display: block;
+		margin-bottom: 5px;
+		margin-top: 15px;
+	p
+		margin-top: 0.875rem
+	img
+		display: inline-block!important
+		margin-right: 0.9375rem
+		vertical-align: middle
+		height: 40px !important
+		+media-breakpoint-down(xs)
+			margin-right: 5px
+	input
+		width: 250px
+	label
+		display: none
+	.rcRefreshImage
+		display: inline-block!important
+		vertical-align: middle
+		position: relative
+		color: transparent
+		width: 30px
+		height: 30px
+		+media-breakpoint-down(xs)
+			+pos(abs, null 0 5px)
+		&:after
+			content: '\f021'
+			font-family: "FontAwesome"
+			font-size: 18px
+			color: $black
+			position: absolute
+			top: 50%
+			right: 0
+			left: 0
+			+transform(translate(0, -50%))
+	#ctl00_mainContent_ctl03_captcha_ctl01
+		float: left
+		+ p 
+			display: table-cell
+			padding: 7px 0
+			input
+				width: 100%
+
+.ActionMenu
+	z-index: 99999 !important
+	.ActionMenuTag
+		line-height: 1.5
+		.fa
+			color: #1B4D79!important
+			width: auto!important
+			height: auto!important
+			border: none!important
+			font-size: 11px!important
+			display: inline-block!important
+			float: left!important
+			border-radius: 0!important
+			line-height: 1.1rem!important
+			margin-right: 4px!important
+	.ActionMenuBody
+		z-index: 99999 !important
+		> dl dd > a
+			color: #1B4D79!important
+			width: auto!important
+			height: auto!important
+			background: transparent
+			.fa
+				color: #1B4D79!important
+				width: auto!important
+				height: auto!important
+				border: none!important
+				font-size: 11px!important
+				display: inline-block!important
+				float: left!important
+				border-radius: 0!important
+				line-height: 1.1rem!important
+				margin-right: 4px!important
+		> h4
+			color: #333!important
+.cmsadminpanel
+	z-index: 16000009
+
+/*Register Form*/
+
+.subscribefrm
+	position: relative
+	.fa.fa-exclamation-triangle
+		color: red
+		+fs(15rem)
+		display: block
+		position: absolute
+		top: 13px
+		right: 130px
+		text-indent: -9999px
+		width: 15px
+		height: 15px
+		line-height: 15px
+		text-align: center
+		&:after
+			content: '\f071'
+			font-size: 12px
+			color: red
+			text-indent: 0
+			float: left
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+	.fa-exclamation-triangle:before, .fa-warning:before
+		margin-right: 5px
+.form-group
+	position: relative
+	.fa.fa-exclamation-triangle
+		position: absolute
+		top: 15px
+		right: 15px
+		color: transparent
+		width: 15px
+		height: 15px
+		&:before
+			content: '\f071'
+			font-size: 12px
+			font-weight: 500
+			color: red
+			position: absolute
+	.fa-exclamation-triangle:before, .fa-warning:before
+		margin-right: 5px
+.contact-form
+	.form-group
+		.fa.fa-exclamation-triangle
+			top: 13px
+			right: 20px
+			+fs(18rem)
+.frm-thanks
+	padding: 15px
+	+fs(18rem)
+	font-style: italic
+	font-weight: 700
+	color: $red
+.alert-success
+	// font-size: 0.875rem
+	// line-height: 1.275rem
+	// font-style: italic
+	// display: block
+	// width: 100%
+	// text-align: center
+	// color: $red
+	// +fs(18rem)
+	// border: none
+	// background-color: rgba(255, 255, 255, 0.8)
+	// padding: 10px
+	// margin: 0
+	// border-radius: 0
+
+.hidden
+	display: none
+	
+.share
+	text-align: left
+	clear: both
+	&.sc-right
+		text-align: right
+	> div
+		display: inline-block
+		margin-bottom: 5px
+		margin-right: 5px
+		vertical-align: top
+	.google, .tweet
+		width: 60px
+	.fb-share-button.fb_iframe_widget iframe, iframe.twitter-share-button
+		display: block
+	.google
+		margin-top: -5px
+
+// **********SEARCH-PAGE**********
+.searchresults 
+	.pagination
+		display: none
+	.altcontent1
+		display: none
+	.pagination
+		text-align: left
+	.banner-home
+		display: none
+	.home-news
+		display: none
+.search-page
+	margin: 40px 0
+	.searchresultsummary
+		display: none
+	.page-header
+		border: none
+		padding: 0
+		margin: 0
+	h1
+		font-size: 21px
+		font-weight: 700
+		margin: 0 0 15px
+		text-transform: none
+		line-height: 1.5em
+		color: $black
+		display: inline-block
+	.btnSearchWrap
+		position: relative
+		.btnSearch
+			@include opacity(1)
+			position: absolute
+			top: 0
+			left: 0
+			text-align: center
+			bottom: 0
+			width: 34px
+			.fa
+				position: absolute
+				right: 0
+				display: block
+				top: 0
+				bottom: 0
+				left: 0
+				margin: 0 auto
+				width: 34px
+				height: 34px
+				line-height: 34px
+				border: 1px solid darken($white, 15%)
+				vertical-align: middle
+		.seachpage-btn
+			position: relative
+			height: 34px
+			width: 34px
+			@include opacity(0)
+	.btn
+		background-color: $blue
+		color: $white
+		border: none
+		+transition(all,.3s)
+		&:hover,  &:focus
+			background-color: darken($blue,5%)
+	.searchsummary
+		margin: 10px 0 25px
+		display: none
+		strong
+			color: $black
+	.searchcontrols
+		margin: 15px 0
+		input[type="text"]
+			height: 35px
+			line-height: 35px
+			padding: 0 15px
+			border: 1px solid darken($white, 15%)
+			font-size: 0.9375rem
+			color: $black
+			@include border-radius(0)
+		input[type="submit"]
+			border: none
+			height: 35px
+			line-height: 35px
+			text-align: center
+			padding: 0 20px
+			color: $white
+			background-color: $red
+	.searchresultlist
+		margin-top: 20px
+	.searchresult
+		border-bottom: 1px solid darken($white, 15%)
+		margin: 0 0 15px
+		padding: 0 0 15px
+		h3
+			font-size: 16px
+			font-weight: 600
+			margin: 0 0 10px
+			color: $black
+			a
+				color: $red
+				text-decoration: none
+				&:hover
+					color: $red
+					text-decoration: underline
+	hr
+		display: none
+
+
+// SEARCH SUGGEST
+.suggestsearch
+	position: absolute!important
+	top: 100%
+	left: 0
+	width: 100%
+	z-index: 401
+	ul 
+		margin: 0
+		padding: 0
+		li 
+			list-style: none
+			display: block
+			border-bottom: 1px dotted darken($white, 10%)
+			&:before, &:after
+				content: ''
+				display: table
+				width: 100%
+				clear: both
+			&:hover,
+			&.selected 
+				background: darken($white, 10%)
+			
+			&.prdlist_icon 
+				margin-bottom: 0
+				height: auto
+			.product-img
+				width: 100px
+				height: 100px
+				overflow: hidden
+				display: flex
+				justify-content: center
+				align-content: center
+				float: left
+				background: $white
+				border: 1px solid darken($white,10%)
+				img 
+					max-height: 90%
+					max-width: 90%
+			.prd-info
+				width: calc(100% - 100px)
+				padding: 10px
+				float: left
+			a 
+				padding: 10px
+				display: block
+				.prd-info 
+					text-align: left
+					h3,
+					h4 
+						font-size: 16px
+						font-weight: 400
+						margin: 0 0 5px
+						line-height: 1.4em
+					
+					h3 
+						font-size: 14px
+						color: darken($red,10%)
+						font-weight: 700
+					
+					h4 
+						color: darken($red,10%)
+					
+					span 
+						display: block
+						&.price 
+							color: $black
+						
+						&.price_original 
+							color: $black
+							text-decoration: line-through

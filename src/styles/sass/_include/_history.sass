@@ -1,0 +1,150 @@
+.home-history
+	margin-bottom: 0
+.historywrap
+	// background: url(../img/history/bg.jpg) repeat
+.history-img
+	.item
+		.img
+			height: 400px
+			+flexbox
+			align-items: center
+			overflow: hidden
+			img 
+				width: 100%
+.history-year
+	width: 270px
+	text-align: center
+	margin: 30px auto 0
+	+pos(rel,null)
+	z-index: 5
+	+media-breakpoint-down(md)
+		margin-top: -25px
+	+media-breakpoint-down(sm)
+		margin-top: -15px
+	&:after
+		content: ''
+		display: block
+		// width: 238px
+		height: 9px
+		background: url(../img/history/yearsd.png) center bottom no-repeat
+		+pos(abs, null 0 0 0)
+		z-index: 5
+	.slick-prev, .slick-next
+		width: 34px
+		height: 68px
+		+fs(0)
+		+pos(abs, 50% null null null)
+		+transform(translateY(-50%))
+		+transition(all,0.3s)
+		+media-breakpoint-down(md)
+			height: 50px
+		+media-breakpoint-down(sm)
+			height: 46px
+		+media-breakpoint-down(xs)
+			height: 36px
+		&:hover
+			filter: brightness(60%)
+	.slick-prev
+		background: url(../img/history/prev.png) center center no-repeat
+		left: -40px
+		background-size: auto 100%
+	.slick-next
+		background: url(../img/history/next.png) center center no-repeat
+		right: -40px
+		background-size: auto 100%
+	// .slick-track
+	// 	padding: 30px 0px 0px
+	.item
+		.year
+			// font-family: 'kanit'
+			+fs(100rem)
+			line-height: 0.8
+			height: 76px
+			font-weight: 900
+			color: $blue
+			text-align: center
+			// text-shadow: 0 3px 30px color-rgba($white,0.5)
+			+media-breakpoint-down(md)
+				+fs(72rem)
+				height: 47px
+			+media-breakpoint-down(sm)
+				+fs(60rem)
+				height: 39px
+			+media-breakpoint-down(xs)
+				+fs(48rem)
+				height: 31px
+.history-content
+	.item
+		.content
+			margin: 20px 0
+			text-align: center
+			+fs(15rem)
+.history-nav
+	margin-bottom: 30px
+	+pos(rel,null)
+	&:before
+		content: ''
+		display: block
+		height: 2px
+		+pos(abs, 50% 0 null 0)
+		background: darken($white,10%)
+		+transform(translateY(-50%))
+	.slick-prev, .slick-next
+		width: 30px
+		height: 24px
+		+fs(0)
+		+pos(abs, 50% null null null)
+		+transform(translateY(-50%))
+		+transition(all,0.3s)
+		&:hover
+			// filter: brightness(60%)
+			
+	.slick-prev
+		background: $white url(../img/history/prev.png) left center no-repeat
+		left: -15px
+		background-size: contain
+	.slick-next
+		background: $white url(../img/history/next.png) right center no-repeat
+		right: -15px
+		background-size: contain
+	.item
+		z-index: 5
+		text-align: center
+		cursor: pointer
+		.yearlist
+			display: flex
+			justify-content: center
+		.year
+			// width: 180px
+			text-align: center
+			background: $white
+			display: inline-block
+			padding: 0px 20px
+			+fs(20rem)
+			// font-family: 'Kanit'
+			color: darken($white,40%)
+			// cursor: pointer
+			&:after
+				content: ''
+				display: block
+				width: 46px
+				height: 2px
+				background: $blue
+				// background: url(../img/history/navsd.png) center bottom no-repeat
+				margin: 0 auto
+				opacity: 0
+				+transform(translateY(100%))
+				+transition(all,0.3s)
+			&.active
+				color: $red
+				&:after
+					opacity: 0.6
+					+transform(translateY(0%))
+		&.slick-current
+			.year
+				color: $black
+				font-weight: 700
+				cursor: pointer
+				&:after
+					opacity: 0.6
+					+transform(translateY(0%))

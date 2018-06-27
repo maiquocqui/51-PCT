@@ -1,0 +1,206 @@
+.homepage
+	footer
+		display: none
+footer
+	.footertop
+		background: url(../img/banner/3.jpg) left center no-repeat
+		background-size: auto 150%
+		+pos(rel,null)
+		&:before
+			content: ''
+			display: block
+			+pos(abs, 0 null 0 0)
+			right: 0
+			background: color-rgba(darken($blue,10%),0.9)
+	.aboutcol
+		.about
+			padding: 40px 0
+			.sitelogo
+				margin-bottom: 15px
+				a
+					display: block
+				img
+					height: 60px
+			.intro
+				+fs(13rem)
+				color: color-rgba($white,0.9)
+				margin-bottom: 20px
+			.contactinfo
+				ul 
+					li 
+						padding-left: 30px
+						+pos(rel,null)
+						margin-bottom: 7px
+						color: color-rgba($white,0.6)
+						&:last-child
+							margin-bottom: 0
+						.fa
+							color: color-rgba($white,0.8)
+							+pos(abs, 3px null null 0)
+							// +fs(18rem)
+						a,span 
+							color: color-rgba($white,0.6)
+							+fs(14rem)
+						a
+							&:hover
+								color: $white
+	.footermain
+		background: darken($blue,10%)
+		+pos(rel,null)
+		padding: 50px 20px 30px
+		+flexbox
+		flex-wrap: wrap
+		.footerwrap
+			border-left: 1px dashed color-rgba($white,0.3)
+			border-right: 1px dashed color-rgba($white,0.3)
+			.Module-159
+				> .ModuleContent
+					+flexbox
+					flex-wrap: wrap
+			.row
+				margin: 0
+				width: 100%
+
+			> .col-xs-12
+				border-top: 1px dashed color-rgba($white,0.3)
+		&:before
+			content: ''
+			display: block
+			background: darken($blue,10%)
+			+pos(abs, 0 null 0 100%)
+			width: 1000px
+			+media-breakpoint-down(md)
+				display: none
+		.col-xs-12
+			+ .col-xs-12
+				border-left: 1px dashed color-rgba($white,0.3)
+				+media-breakpoint-down(sm)
+					border-left: none
+			&:last-child
+				// border-left: none
+				// border-top: 1px dashed color-rgba($white,0.3)
+		.footercol
+			padding: 0px 0px 10px
+			+media-breakpoint-down(sm)
+				text-align: center
+			.title
+				// +fs(16rem)
+				font-weight: 600
+				color: $white
+				text-transform: uppercase
+				margin-bottom: 20px
+				&:after
+					content: ''
+					display: block
+					width: 30px
+					height: 2px
+					background: $white
+					margin-top: 15px
+					+media-breakpoint-down(sm)
+						margin: 15px auto 0
+			.footerlink
+				ul 
+					li 
+						margin-bottom: 10px
+						a 
+							+fs(13rem)
+							color: color-rgba($white,0.6)
+							&:hover
+								color: $white
+								// letter-spacing: 1px
+								text-decoration: underline
+		.subscribe-wrap
+			padding: 20px 15px
+			+flexbox
+			flex-wrap: wrap
+			+media-breakpoint-down(sm)
+				padding: 15px 0px
+			.module-title
+				font-weight: 600
+				padding: 8px 0
+				color: $white
+				text-transform: uppercase
+				// margin-bottom: 15px
+				width: 200px
+				+media-breakpoint-down(sm)
+					margin-bottom: 10px
+				// &:after
+				// 	content: ''
+				// 	display: block
+				// 	width: 30px
+				// 	height: 2px
+				// 	background: $white
+				// 	margin-top: 10px
+			.subscribe
+				width: calc(100% - 200px)
+				+flexbox
+				+media-breakpoint-down(sm)
+					width: 100%
+				#ctl00_mdl160_ctl00_subscribe1_UpdatePanel1
+					width: 100%
+				.subscribefrm
+					+flexbox
+				input
+					+bor-rad(3px)
+					background: color-rgba($white,0.1)
+					color: $white
+					border: none
+					line-height: 40px
+					padding: 0 15px
+					width: calc(100% - 120px)
+					&:hover,&:active, &:focus
+						background: color-rgba($white,0.2)
+				.subscribebutton
+					width: 120px
+					line-height: 40px
+					background: lighten($blue,20%)
+					+bor-rad(3px)
+					color: $white
+					text-transform: uppercase
+					// width: 180px
+					white-space: nowrap
+					text-align: center
+					margin-left: 10px
+					overflow: hidden
+					+transform(perspective(1px)translateZ(0))
+					+pos(rel,null)
+					&:after
+						content: '\f1d9'
+						font-family: 'fontawesome'
+						margin-left: 5px
+					&:before
+						content: ''
+						display: block
+						+pos(abs, 0 100% 0 0)
+						z-index: -1
+						background: lighten($blue,10%)
+						+transition(all,0.5s)
+					&:hover
+						color: $white
+						&:before
+							right: 0
+	.footerbottom
+		background: $blue
+		+pos(rel,null)
+		z-index: 10
+		.copyright
+			+fs(13rem)
+			color: color-rgba($white,0.4)
+			line-height: 20px
+			padding: 10px 0
+			float: left
+			strong 
+				color: color-rgba($white,0.8)
+		.up
+			float: right
+			width: 40px
+			height: 40px
+			line-height: 40px
+			text-align: center
+			+fs(12rem)
+			color: color-rgba($white,0.8)
+			background: color-rgba($black,0.2)
+			cursor: pointer
+			&:hover
+				color: $white
+				background: color-rgba($black,0.3)

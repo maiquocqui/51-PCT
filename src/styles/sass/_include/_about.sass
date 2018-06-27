@@ -1,0 +1,238 @@
+.about-page
+	padding: 60px 0
+	+media-breakpoint-down(sm)
+		padding: 40px 0
+	.about-img
+		+media-breakpoint-down(md)
+			margin-bottom: 30px
+	.about-info
+		border: 1px dashed darken($white,20%)
+		+bor-rad(5px)
+		overflow: hidden
+		li 
+			+flexbox
+			flex-wrap: wrap
+			border-bottom: 1px dashed darken($white,10%)
+			.label
+				width: 170px
+				padding: 10px
+				background: darken($white,5%)
+				+media-breakpoint-down(md)
+					width: 130px
+			.value
+				width: calc(100% - 170px)
+				padding: 10px
+				border-left: 1px dashed darken($white,10%)
+				+media-breakpoint-down(md)
+					width: calc(100% - 130px)
+				a 
+					color: $main
+					&:hover
+						color: $blue
+
+.about-value
+	// max-width: 90%
+	margin: 0 auto
+	.value-col
+		margin-bottom: 30px
+		box-shadow: 0 5px 30px color-rgba($black,0.1)
+		+transition(all,0.5s)
+		// cursor: pointer
+		&:hover
+			box-shadow: 0 10px 30px color-rgba($black,0.2)
+		figure 
+			+flexbox
+			flex-wrap: wrap
+			border: 1px solid darken($white,10%)
+			.value-img
+				width: 50%
+				+media-breakpoint-down(lg)
+					overflow: hidden
+					img 
+						height: 400px
+						max-width: unset
+				+media-breakpoint-down(md)
+					width: 100%
+					img 
+						height: auto
+						max-width: 100%
+			figcaption
+				width: 50%
+				+flexbox
+				flex-wrap: wrap
+				align-content: center
+				align-items: center
+				padding: 0 30px
+				+media-breakpoint-down(lg)
+					padding: 0px 30px
+				+media-breakpoint-down(md)
+					width: 100%
+					padding: 30px
+				.value-title
+					width: 100%
+					+fs(20rem)
+					font-weight: 600
+					text-transform: uppercase
+					margin-bottom: 20px
+					a 
+						color: $main
+					&:after
+						content: ''
+						display: block
+						width: 60px
+						height: 2px
+						background: $blue
+						margin-top: 10px
+				.value-des
+					width: 100%
+					color: darken($white,50%)
+					p 
+						margin-bottom: 15px
+						&:last-child
+							margin-bottom: 0
+		&:nth-child(even)
+			figure 
+				.value-img 
+					order: 2
+					+media-breakpoint-down(md)
+						order: 1
+				figcaption
+					order: 1
+					+media-breakpoint-down(md)
+						order: 2
+
+.about-system
+	margin-bottom: 40px
+	text-align: center
+	+media-breakpoint-down(md)
+		// margin-bottom: 0
+.about-ceo
+	margin-bottom: 40px
+	+media-breakpoint-down(md)
+		margin-bottom: 0
+	.col-xs-12
+		margin-bottom: 30px
+	.ceo-col
+		// margin-bottom: 30px
+		height: 100%
+		background: darken($white,5%)
+		figure 
+			padding: 15px
+			+flexbox
+			flex-wrap: wrap
+			.ceo-img
+				width: 140px
+				+media-breakpoint-down(xs)
+					width: 100%
+				img 
+			figcaption
+				width: calc(100% - 140px)
+				padding-left: 15px
+				+media-breakpoint-down(xs)
+					width: 100%
+					padding: 10px 0 0
+				.ceo-name
+					+fs(18rem)
+					font-weight: 700
+					text-transform: capitalize
+					margin-bottom: 5px
+				.ceo-cv
+					+fs(14rem)
+					// font-weight: 500
+					color: darken($white,40%)
+					// border-bottom: 1px solid darken($white,10%)
+					// padding-bottom: 10px
+					margin-bottom: 10px
+					// &:after
+					// 	content: ''
+					// 	display: block
+					// 	width: 50px
+					// 	height: 2px
+					// 	background: $blue
+					// 	margin-top: 10px
+				ul.ceo-des
+					li 
+						padding-left: 20px
+						+pos(rel,null)
+						+fs(13rem)
+						&:before
+							content: ''
+							display: block
+							width: 8px
+							height: 8px
+							+bor-rad(50px)
+							border: 1px solid $red
+							+pos(abs, 6px null null 0)
+.about-staff
+	margin-bottom: 40px
+	+media-breakpoint-down(md)
+		margin-bottom: 0
+	.staff-col
+		+media-breakpoint-down(md)
+			margin-bottom: 30px
+		figure
+			+pos(rel,null) 
+			.staff-img
+				display: block
+				overflow: hidden
+				img 
+					+transition(all,0.5s)
+			figcaption
+				+pos(abs, null 0 0 0)
+				background: color-rgba($blue,0.8)
+				text-align: center
+				.staff-name
+					+fs(14rem)
+					color: $white
+					font-weight: 500
+					text-transform: uppercase
+					line-height: 40px
+			&:hover
+				.staff-img
+					img 
+						+transform(scale3d(1.2,1.2,1))
+.about-member
+	.member-col
+		+media-breakpoint-down(md)
+			margin-bottom: 30px
+		figure 
+			cursor: pointer
+			.member-img
+				display: block
+				img
+			figcaption
+				background: darken($white,10%)
+				padding: 20px
+				+transition(all,0.5s)
+				.member-name
+					font-weight: 700
+					margin-bottom: 10px
+					color: $main
+					// +fs(16rem)
+					text-transform: uppercase
+					a 
+						color: $main
+				.addr
+					// padding-left: 25px
+					+pos(rel,null)
+					+transition(all,0.5s)
+					.addr
+						padding-left: 25px
+					.fa
+						+pos(abs, 3px null null 0)
+						// +fs(18rem)
+					a 
+						color: $main
+						&:hover
+							color: $blue
+			&:hover
+				figcaption
+					background: $blue
+					.member-name
+						color: $white
+						a 
+							color: $white
+					.addr
+						color: $white
+						a 
+							color: $white

@@ -1,0 +1,21 @@
+mixin breadcrumb(page,img)
+	section.breadcrumbwrap.clearfix
+		.breadcrumbimg(style="background: url(#{img}) center center no-repeat;background-size:cover")
+			//- img(src="img/breadcrumb/2.jpg", alt="")
+		.container
+			.pagename
+		.breadcrumbcontent
+			.container
+				ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+					li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+						a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+							span(itemprop='name') Trang chủ
+						meta(itemprop='position', content='1')
+					li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+						a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+							span(itemprop='name') #{page}
+						meta(itemprop='position', content='2')
+					//- li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+						a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+							span(itemprop='name') Window boxes
+						meta(itemprop='position', content='3')
